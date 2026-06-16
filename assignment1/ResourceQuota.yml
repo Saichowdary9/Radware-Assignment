@@ -1,0 +1,13 @@
+kind: ResourceQuota
+apiVersion: v1
+metadata: 
+  name: intern-quota
+  namespace: intern-test
+spec:
+  hard:
+    pods: "3"
+    requests.cpu: "1"
+    requests.memory: "1Gi"
+    limits.cpu: "2"
+    limits.memory: "2Gi"
+

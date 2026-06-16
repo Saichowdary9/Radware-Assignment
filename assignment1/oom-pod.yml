@@ -1,0 +1,21 @@
+kind: Pod
+apiVersion: v1 
+metadata:
+  name: oom-pod
+  namespace: intern-test
+spec:
+  containers:
+  - name: memory-hog
+    image: polinux/stress
+    command:
+    - stress
+    args:
+    - "--vm"
+    - "1"
+    - "--vm-hang"
+    - "1"
+    resources:
+      requests:
+        memory: "25Mi"
+      limits: 
+        memory: "50Mi"  

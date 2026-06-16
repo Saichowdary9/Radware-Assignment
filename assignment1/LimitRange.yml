@@ -1,0 +1,15 @@
+kind: LimitRange
+apiVersion: v1
+metadata:
+  name: default-limits
+  namespace: intern-test
+spec: 
+  limits:
+  - type: Container
+    default:
+      cpu: "500m"
+      memory: "512Mi"
+    defaultRequest:
+      cpu: "200m"
+      memory: "256Mi"
+

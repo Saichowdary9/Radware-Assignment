@@ -1,0 +1,9 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: good-pod
+  namespace: intern-test
+spec:
+  containers: 
+  - name: nginx
+    image: nginx
